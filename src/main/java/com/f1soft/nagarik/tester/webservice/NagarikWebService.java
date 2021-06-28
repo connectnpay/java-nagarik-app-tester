@@ -63,7 +63,7 @@ public class NagarikWebService extends RestTemplate {
 
         final HttpEntity<MultiValueMap<String, String>> httpEntity = new HttpEntity<>(formData, headers);
 
-        final URI uri = URI.create(BASE_URL + "/clients/native/redirection-consent");
+        final URI uri = URI.create(BASE_URL + "/web0auth/check");
 
         ResponseEntity<JsonNode> response = exchange(uri, HttpMethod.POST, httpEntity, JsonNode.class);
 
